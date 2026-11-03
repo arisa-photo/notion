@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=36">
+<link rel="stylesheet" href="style.css?v=44">
 </head>
 <body>
 
@@ -175,8 +175,14 @@
       <h2>作成できるページ例</h2>
       <p>あなたの業種・業態に合わせてカスタマイズします。</p>
     </div>
+    <div class="tpl-filter">
+      <div class="tf-tabs" role="tablist"><button type="button" class="tf-tab is-on" data-tab="ind">業種から探す</button><button type="button" class="tf-tab" data-tab="fn">機能から探す</button><button type="button" class="tf-tab" data-tab="list">一覧から探す</button></div>
+      <div class="tf-chips" data-key="ind"><button type="button" class="tf-chip is-on" data-v="all">すべて</button><button type="button" class="tf-chip" data-v="salon">サロン・美容</button><button type="button" class="tf-chip" data-v="school">教室・講師</button><button type="button" class="tf-chip" data-v="photo">フォトグラファー・クリエイター</button><button type="button" class="tf-chip" data-v="handmade">ハンドメイド・物販</button><button type="button" class="tf-chip" data-v="freelance">フリーランス・個人事業</button><button type="button" class="tf-chip" data-v="private">プライベート</button></div>
+      <div class="tf-chips" data-key="fn" hidden><button type="button" class="tf-chip is-on" data-v="all">すべて</button><button type="button" class="tf-chip" data-v="customer">顧客・予約</button><button type="button" class="tf-chip" data-v="money">お金の管理</button><button type="button" class="tf-chip" data-v="progress">進行・スケジュール</button><button type="button" class="tf-chip" data-v="goods">商品・在庫</button><button type="button" class="tf-chip" data-v="share">お客様への共有</button><button type="button" class="tf-chip" data-v="stock">記録・ストック</button><button type="button" class="tf-chip" data-v="sns">SNS・発信</button><button type="button" class="tf-chip" data-v="life">暮らし</button></div>
+    </div>
+    <div class="tpl-view">
     <div class="tpl-grid">
-      <article class="tpl-card">
+      <article class="tpl-card" data-sample="" data-ind="salon school handmade" data-fn="customer">
         <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
         <div class="tpl-body">
           <h3>顧客管理</h3>
@@ -185,15 +191,15 @@
           <div class="tpl-price">12,000<span>円（税込）</span></div>
         </div>
       </article>
-      <article class="tpl-card">
+      <article class="tpl-card" data-sample="" data-ind="school photo" data-fn="customer progress">
         <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
         <div class="tpl-body">
-          <h3>撮影会管理</h3>
+          <h3>イベント管理</h3>
           <p>日程・参加者・入金状況をまとめて管理。</p>
           <div class="tpl-price">12,000<span>円（税込）</span></div>
         </div>
       </article>
-      <article class="tpl-card">
+      <article class="tpl-card" data-sample="" data-ind="salon photo freelance handmade" data-fn="money">
         <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
         <div class="tpl-body">
           <h3>支出管理</h3>
@@ -201,7 +207,7 @@
           <div class="tpl-price">12,000<span>円（税込）</span></div>
         </div>
       </article>
-      <article class="tpl-card">
+      <article class="tpl-card" data-sample="" data-ind="school" data-fn="customer">
         <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
         <div class="tpl-body">
           <h3>講座受講歴</h3>
@@ -209,7 +215,7 @@
           <div class="tpl-price">12,000<span>円（税込）</span></div>
         </div>
       </article>
-      <article class="tpl-card">
+      <article class="tpl-card" data-sample="" data-ind="salon freelance" data-fn="money">
         <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
         <div class="tpl-body">
           <h3>サブスク管理</h3>
@@ -217,13 +223,133 @@
           <div class="tpl-price">10,000<span>円（税込）</span></div>
         </div>
       </article>
+      <article class="tpl-card" data-sample="" data-ind="salon school photo freelance handmade" data-fn="money">
+        <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
+        <div class="tpl-body">
+          <h3>収支管理</h3>
+          <p>売上と経費を入力するだけで、利益まで自動で計算。</p>
+          <div class="tpl-price">12,000<span>円（税込）</span></div>
+        </div>
+      </article>
+      <article class="tpl-card" data-sample="" data-ind="salon school photo handmade" data-fn="share">
+        <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
+        <div class="tpl-body">
+          <h3>プラン・サービス一覧</h3>
+          <p>メニューや料金をまとめて、お客様にそのまま共有。</p>
+          <div class="tpl-price">12,000<span>円（税込）</span></div>
+        </div>
+      </article>
+      <article class="tpl-card" data-sample="" data-ind="photo freelance handmade" data-fn="progress">
+        <div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>
+        <div class="tpl-body">
+          <h3>案件管理</h3>
+          <p>依頼内容・納期・進み具合をひと目で把握。</p>
+          <div class="tpl-price">12,000<span>円（税込）</span></div>
+        </div>
+      </article>
     </div>
-    <p class="tpl-sub">そのほかにも、こんなページをお作りできます</p>
+    <div class="tpl-match" id="tplMatch" hidden><p class="tpl-sub">そのほかの該当ページ</p><dl></dl></div>
+    <p class="tpl-empty" id="tplEmpty" hidden>この組み合わせのページ例はまだありません。ご相談いただければお作りします。</p>
+    <p class="tpl-sub">そのほかにも、こんなページをお作りできます（基本12,000円〜・税込）</p>
     <div class="tpl-cats">
-      <div class="tpl-cat"><h4>顧客・金銭管理</h4><ul><li>顧客管理（予約フォーム連携）</li><li>収支管理（自動計算つき）</li><li>プラン・サービス一覧</li><li>案件管理</li></ul></div>
-      <div class="tpl-cat"><h4>業務管理</h4><ul><li>ToDoリスト（優先順位つき）</li><li>スケジュール管理</li><li>サブスク管理</li><li>目標管理</li></ul></div>
-      <div class="tpl-cat"><h4>SNS・マーケティング</h4><ul><li>SNS投稿管理</li><li>コンテンツアイデアストック</li><li>資料置き場</li></ul></div>
-      <div class="tpl-cat"><h4>暮らし・プライベート</h4><ul><li>家計簿</li><li>レシピブック</li><li>育児記録</li><li>取り扱い説明書集</li></ul></div>
+      <div class="tpl-cat"><h4>撮影・フォトグラファー</h4><ul><li>撮影会の売上管理</li><li>納品管理・機材管理</li><li>ロケハン記録・衣装リスト</li><li>撮影アイデア集・ポーズ集</li></ul></div>
+      <div class="tpl-cat"><h4>業務・物販</h4><ul><li>取り扱い商品・在庫管理</li><li>注文・発送管理</li><li>請求書・入金管理</li><li>スケジュール管理</li><li>目標管理</li></ul></div>
+      <div class="tpl-cat"><h4>SNS・マーケティング</h4><ul><li>SNS投稿管理</li><li>SNS毎日記録</li><li>コンテンツアイデアストック</li><li>資料置き場</li></ul></div>
+      <div class="tpl-cat"><h4>暮らし・プライベート</h4><ul><li>家計簿・日記</li><li>子どもの成長記録</li><li>健康・通院記録</li><li>推し活・WISHリスト</li></ul></div>
+    </div>
+    </div>
+    <div class="tpl-list" id="tplList" hidden>
+      <h4>顧客・予約</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>顧客管理</dt><dd class="tl-desc">お客様の情報・来店履歴・メモをひとつに。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>イベント管理</dt><dd class="tl-desc">日程・参加者・入金状況をまとめて管理。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>講座受講歴</dt><dd class="tl-desc">受講者ごとの受講履歴・進み具合を一覧で。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+      </dl>
+      <h4>お金の管理</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>支出管理</dt><dd class="tl-desc">経費を入力するだけで、月ごとの集計まで自動で。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>収支管理</dt><dd class="tl-desc">売上と経費を入力するだけで、利益まで自動で計算。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>サブスク管理</dt><dd class="tl-desc">契約中のサービスと毎月の支払いを見える化。</dd><dd class="tl-price">10,000円<span>（税込）</span></dd></div>
+      </dl>
+      <h4>進行・スケジュール</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>案件管理</dt><dd class="tl-desc">依頼内容・納期・進み具合をひと目で把握。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+      </dl>
+      <h4>お客様への共有</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>プラン・サービス一覧</dt><dd class="tl-desc">メニューや料金をまとめて、お客様にそのまま共有。</dd><dd class="tl-price">12,000円<span>（税込）</span></dd></div>
+      </dl>
+      <h4>撮影・フォトグラファー</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>撮影会の売上管理</dt><dd class="tl-desc">撮影会ごとの売上・参加費を自動で集計。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>撮影前の準備チェックリスト</dt><dd class="tl-desc">機材や持ち物の確認漏れを防止。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>ロケハン記録</dt><dd class="tl-desc">撮影場所の情報や写真をストック。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>衣装リスト</dt><dd class="tl-desc">衣装・小物の管理と貸し出し状況を一覧に。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>撮影アイデア集・ポーズ集</dt><dd class="tl-desc">構図やポーズの参考をまとめて保存。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>写真添削・撮影同行の記録</dt><dd class="tl-desc">受講者ごとのフィードバックを残せる。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>納品管理</dt><dd class="tl-desc">撮影から編集・納品までの進み具合を管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>機材管理</dt><dd class="tl-desc">機材・購入日・メンテナンスの記録。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>ハンドメイド・物販</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>取り扱い商品管理</dt><dd class="tl-desc">商品の在庫・価格・販売状況をまとめて管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>在庫管理</dt><dd class="tl-desc">材料・完成品の数を管理し、少なくなったらすぐ分かる。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>注文・発送管理</dt><dd class="tl-desc">受注から制作・発送・評価までの進み具合を管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>材料・仕入れ管理</dt><dd class="tl-desc">仕入れ先・単価・購入履歴をまとめて記録。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>原価計算</dt><dd class="tl-desc">材料費から原価と利益率を自動で計算。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>イベント・マルシェ出店管理</dt><dd class="tl-desc">出店予定・売上・持ち物リストをひとつに。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>作品アーカイブ</dt><dd class="tl-desc">作品の写真・販売先・価格を記録。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>サロン・美容</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>予約・施術カルテ</dt><dd class="tl-desc">施術内容・薬剤・写真をお客様ごとに記録。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>回数券・会員管理</dt><dd class="tl-desc">残り回数や有効期限をひと目で確認。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>物販・店販管理</dt><dd class="tl-desc">店販商品の在庫と売上を管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>教室・講師</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>受講生・入金管理</dt><dd class="tl-desc">月謝の入金状況をひと目で確認。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>カリキュラム・教材管理</dt><dd class="tl-desc">講座ごとの内容と資料をまとめて管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>振替・欠席管理</dt><dd class="tl-desc">欠席と振替の予定を管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>フリーランス・個人事業</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>請求書・入金管理</dt><dd class="tl-desc">請求日・入金予定・未入金をチェック。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>取引先管理</dt><dd class="tl-desc">連絡先と案件の履歴をまとめて管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>確定申告準備</dt><dd class="tl-desc">経費の仕分けと年間の集計。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>業務管理</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>ToDoリスト</dt><dd class="tl-desc">優先順位つきで、やることを整理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>スケジュール管理</dt><dd class="tl-desc">予定と締め切りをカレンダーで管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>目標管理</dt><dd class="tl-desc">目標と進み具合を見える化。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>お問い合わせ管理</dt><dd class="tl-desc">問い合わせから成約までを記録。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>マニュアル・業務手順書</dt><dd class="tl-desc">自分用・外注さん向けの手順をまとめて。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>外注・スタッフ管理</dt><dd class="tl-desc">依頼内容・連絡先・支払いを管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>SNS・マーケティング</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>SNS投稿管理</dt><dd class="tl-desc">企画から投稿日までをひとつに。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>SNS毎日記録</dt><dd class="tl-desc">日々の投稿と反応を記録して振り返り。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>コンテンツアイデアストック</dt><dd class="tl-desc">思いついたネタをためて、すぐ使える形に。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>資料置き場</dt><dd class="tl-desc">よく使う資料をまとめて、すぐ取り出せる。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
+      <h4>暮らし・プライベート</h4>
+      <dl>
+        <div class="tl-row" tabindex="0"><dt>家計簿</dt><dd class="tl-desc">毎月の家計をかんたんに記録・集計。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>日記・ジャーナリング</dt><dd class="tl-desc">毎日の記録や気持ちの整理に。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>子どもの成長記録・育児記録</dt><dd class="tl-desc">成長や予定を家族で共有。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>健康記録・通院記録</dt><dd class="tl-desc">体調や通院の履歴をまとめて管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>レシピブック</dt><dd class="tl-desc">お気に入りのレシピをまとめて保存。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>結婚・妊娠チェックリスト</dt><dd class="tl-desc">準備することを順番に確認。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>出産祝い・内祝い管理</dt><dd class="tl-desc">いただいたお祝いとお返しを一覧で。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>年間行事・大掃除スケジュール</dt><dd class="tl-desc">季節の行事や家事を計画的に。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>欲しいもの・WISHリスト</dt><dd class="tl-desc">やりたいこと・欲しいものを見える化。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>プレゼントリスト</dt><dd class="tl-desc">贈った・もらったプレゼントを記録。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>推し活・LIVE参戦履歴</dt><dd class="tl-desc">出演情報や参戦の記録をまとめて。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>ブックリスト・映画記録</dt><dd class="tl-desc">読んだ本・観た映画を感想と一緒に。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+        <div class="tl-row" tabindex="0"><dt>家電の取り扱い説明書</dt><dd class="tl-desc">説明書や保証書をまとめて管理。</dd><dd class="tl-price">12,000円〜<span>（税込）</span></dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -306,7 +432,7 @@
     <h2 class="contact-title">Contact</h2>
     <p>ご相談・ご依頼は、こちらから<br>お気軽にお問い合わせください。</p>
     <div class="contact-btns">
-      <a class="contact-btn" href="mailto:">
+      <a class="contact-btn" href="mailto:arisa.roff@gmail.com">
         <svg class="ic-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
         メールでお問い合わせ
       </a>
@@ -343,14 +469,121 @@
 </script>
 <div class="tpl-zoom" id="tplZoom" aria-hidden="true"><button class="tpl-zoom-close" aria-label="閉じる">×</button><div class="tpl-zoom-inner"></div></div>
 <script>
-(()=>{const z=document.getElementById('tplZoom'),box=z.querySelector('.tpl-zoom-inner');
-const close=()=>{z.classList.remove('open');z.setAttribute('aria-hidden','true');document.body.style.overflow='';box.innerHTML='';};
-document.querySelectorAll('.tpl-card').forEach(c=>{c.setAttribute('tabindex','0');const open=()=>{
-box.innerHTML=c.querySelector('.tpl-thumb').outerHTML+'<div class="tpl-zoom-cap">'+c.querySelector('h3').textContent+'<span>'+c.querySelector('.tpl-price').textContent+'</span></div>';
-z.classList.add('open');z.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
-c.addEventListener('click',open);c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});
-z.addEventListener('click',e=>{if(!box.contains(e.target))close();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});})();
+  // ページ例：Notion（GAS経由）から読み込み。失敗したときはHTMLに書いた内容をそのまま表示
+  const PAGES_API = "https://script.google.com/macros/s/AKfycbw_ZzAaJ5ShrcZCGlMD8b1FFa9hiijfWj2C5VvIkqhl4gSJDakgrfB1LQS_jBWuEJpe/exec?type=pages"; // GASのウェブアプリURL（/exec）を貼る
+  (function(){
+    const IND={'サロン・美容':'salon','教室・講師':'school','フォトグラファー・クリエイター':'photo','ハンドメイド・物販':'handmade','フリーランス・個人事業':'freelance','プライベート':'private'};
+    const FN={'顧客・予約':'customer','お金の管理':'money','進行・スケジュール':'progress','商品・在庫':'goods','お客様への共有':'share','記録・ストック':'stock','SNS・発信':'sns','暮らし':'life'};
+    const FN_ORDER=Object.keys(FN);
+    const grid=document.querySelector('.tpl-grid'), list=document.getElementById('tplList');
+    const z=document.getElementById('tplZoom'), box=z.querySelector('.tpl-zoom-inner');
+    const sel={ind:'all',fn:'all'};
+    const esc=t=>String(t==null?'':t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const safeUrl=u=>/^https?:\/\//.test(u||'')?u:'';
+    const yen=n=>Number(n).toLocaleString('ja-JP');
+    const link=u=>'<a class="tpl-link" href="'+esc(u)+'" target="_blank" rel="noopener">サンプルを見る<span aria-hidden="true">↗</span></a>';
+    const thumb=img=>img
+      ?'<div class="tpl-thumb has-img"><img src="'+esc(img)+'" alt="" loading="lazy"></div>'
+      :'<div class="tpl-thumb" aria-hidden="true"><span class="tt-title"></span><span class="tt-row h"></span><span class="tt-row"></span><span class="tt-row"></span><span class="tt-row"></span></div>';
+    const priceHtml=it=>it.price==null?'<div class="tpl-price">お見積り</div>':'<div class="tpl-price">'+yen(it.price)+'<span>円'+(it.from?'〜':'')+'（税込）</span></div>';
+
+    const render=items=>{
+      const cards=items.filter(it=>it.card);
+      grid.innerHTML=cards.map(it=>
+        '<article class="tpl-card" data-sample="'+esc(safeUrl(it.url))+'" data-ind="'+(it.ind||[]).map(x=>IND[x]||'').join(' ')+'" data-fn="'+(it.fn||[]).map(x=>FN[x]||'').join(' ')+'">'+
+        thumb(safeUrl(it.image))+
+        '<div class="tpl-body"><h3>'+esc(it.name)+'</h3><p>'+esc(it.desc)+'</p>'+
+        ((it.options||[]).length?'<ul class="tpl-opts">'+it.options.map(o=>'<li>'+esc(o.label)+'<span>+'+yen(o.price)+'円</span></li>').join('')+'</ul>':'')+
+        priceHtml(it)+'</div></article>').join('');
+      const groups=FN_ORDER.map(name=>({name,rows:[]})).concat([{name:'その他',rows:[]}]);
+      items.forEach(it=>{
+        // Notionで最初に選んだ機能の見出しに並べる
+        const f=(it.fn||[]).find(x=>FN_ORDER.includes(x));
+        groups.find(g=>g.name===(f||'その他')).rows.push(it);
+      });
+      list.innerHTML=groups.filter(g=>g.rows.length).map(g=>'<h4>'+esc(g.name)+'</h4><dl>'+g.rows.map(it=>{
+        const pr=it.price==null?'お見積り':yen(it.price)+'円'+(it.from?'〜':'');
+        return '<div class="tl-row" tabindex="0" data-card="'+(it.card?'1':'')+'" data-ind="'+(it.ind||[]).map(x=>IND[x]||'').join(' ')+'" data-fn="'+(it.fn||[]).map(x=>FN[x]||'').join(' ')+'" data-sample="'+esc(safeUrl(it.url))+'" data-img="'+esc(safeUrl(it.image))+'"><dt>'+esc(it.name)+'</dt><dd class="tl-desc">'+esc(it.desc)+'</dd><dd class="tl-price">'+pr+'<span>（税込）</span></dd></div>';
+      }).join('')+'</dl>').join('');
+    };
+
+    const initCards=()=>{
+      grid.querySelectorAll('.tpl-card').forEach(c=>{
+        c.setAttribute('tabindex','0');
+        const url=c.dataset.sample;
+        if(url&&!c.querySelector('.tpl-link')) c.querySelector('.tpl-body').insertAdjacentHTML('beforeend',link(url));
+      });
+    };
+    const match=document.getElementById('tplMatch'), matchList=match.querySelector('dl');
+    const hit=el=>['ind','fn'].every(k=>sel[k]==='all'||(el.dataset[k]||'').split(' ').includes(sel[k]));
+    const apply=()=>{
+      const cards=grid.querySelectorAll('.tpl-card');
+      cards.forEach(c=>{c.hidden=!hit(c);});
+      const filtering=sel.ind!=='all'||sel.fn!=='all';
+      const rows=filtering?[...list.querySelectorAll('.tl-row')].filter(r=>!r.dataset.card&&hit(r)):[];
+      matchList.innerHTML=''; rows.forEach(r=>matchList.appendChild(r.cloneNode(true)));
+      match.hidden=!rows.length;
+      document.querySelectorAll('.tpl-view > .tpl-sub, .tpl-view > .tpl-cats').forEach(el=>{el.hidden=filtering;});
+      document.getElementById('tplEmpty').hidden=[...cards].some(c=>!c.hidden)||rows.length>0;
+    };
+
+    // 拡大表示
+    const close=()=>{z.classList.remove('open');z.setAttribute('aria-hidden','true');document.body.style.overflow='';box.innerHTML='';};
+    const sampleBtn=u=>u?link(u):'<span class="tpl-link is-off">サンプル準備中</span>';
+    const show=(thumbHtml,name,desc,price,url)=>{
+      box.innerHTML=thumbHtml+'<div class="tpl-zoom-cap">'+esc(name)+'<span>'+esc(price)+'</span></div>'+(desc?'<p class="tpl-zoom-desc">'+esc(desc)+'</p>':'')+sampleBtn(url);
+      z.classList.add('open');z.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+    };
+    const open=c=>show(c.querySelector('.tpl-thumb').outerHTML,c.querySelector('h3').textContent,(c.querySelector('.tpl-body p')||{}).textContent||'',c.querySelector('.tpl-price').textContent,c.dataset.sample);
+    const openRow=r=>show(r.dataset.img?thumb(r.dataset.img):'',r.querySelector('dt').textContent,r.querySelector('.tl-desc').textContent,r.querySelector('.tl-price').textContent,r.dataset.sample||'');
+    grid.addEventListener('click',e=>{
+      if(e.target.closest('.tpl-link')) return;
+      const c=e.target.closest('.tpl-card'); if(c) open(c);
+    });
+    grid.addEventListener('keydown',e=>{
+      const c=e.target.closest('.tpl-card');
+      if(c&&e.target===c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();open(c);}
+    });
+    [list,match].forEach(el=>el.addEventListener('click',e=>{const r=e.target.closest('.tl-row'); if(r) openRow(r);}));
+    [list,match].forEach(el=>el.addEventListener('keydown',e=>{
+      const r=e.target.closest('.tl-row');
+      if(r&&e.target===r&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openRow(r);}
+    }));
+    z.addEventListener('click',e=>{if(!box.contains(e.target))close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+
+    // 絞り込み・タブ
+    const groups=document.querySelectorAll('.tf-chips');
+    const view=document.querySelector('.tpl-view');
+    const pick=(group,btn)=>{
+      group.querySelectorAll('.tf-chip').forEach(b=>b.classList.toggle('is-on',b===btn));
+      sel[group.dataset.key]=btn.dataset.v;
+    };
+    groups.forEach(group=>{
+      group.addEventListener('click',e=>{
+        const btn=e.target.closest('.tf-chip'); if(!btn) return;
+        pick(group,btn); apply();
+      });
+    });
+    document.querySelectorAll('.tf-tab').forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        const t=tab.dataset.tab;
+        document.querySelectorAll('.tf-tab').forEach(b=>b.classList.toggle('is-on',b===tab));
+        groups.forEach(g=>{g.hidden=g.dataset.key!==t; pick(g,g.querySelector('[data-v=all]'));});
+        apply();
+        view.hidden=t==='list'; list.hidden=t!=='list';
+      });
+    });
+
+    initCards();
+    if(PAGES_API){
+      fetch(PAGES_API).then(r=>r.json()).then(items=>{
+        if(!Array.isArray(items)||!items.length) return;
+        items.sort((a,b)=>(a.order??999)-(b.order??999));
+        render(items); initCards(); apply();
+      }).catch(()=>{});
+    }
+  })();
 </script>
 </body>
 </html>

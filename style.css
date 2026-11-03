@@ -725,3 +725,66 @@
 @media (max-width:560px){ .tpl-opts li{font-size:9.5px;} }
 .photo-frame.has-photo{padding:0;border:0;overflow:hidden;}
 .photo-frame.has-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+/* page-example categories: 3 columns */
+.tpl-cats{grid-template-columns:repeat(4,1fr);}
+@media (max-width:800px){
+  .tpl-cats{grid-template-columns:1fr;}
+  .tpl-cat,.tpl-cat:nth-child(2){border-right:0;border-bottom:1px solid var(--line);}
+  .tpl-cat:last-child{border-bottom:0;}
+}
+/* page-example filter */
+.tpl-filter{display:flex;flex-direction:column;gap:10px;margin:0 0 22px;}
+.tf-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.tf-label{font-size:12px;color:var(--accent-strong);letter-spacing:0.06em;min-width:84px;}
+.tf-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.tf-chip{font:inherit;font-size:12px;color:var(--gray-700);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.tf-chip:hover{background:var(--accent-soft);}
+.tf-chip.is-on{background:#6f695a;border-color:#6f695a;color:#fff;}
+.tpl-card[hidden]{display:none;}
+@media (max-width:560px){
+  .tf-row{flex-direction:column;align-items:flex-start;gap:6px;}
+  .tf-chip{font-size:11px;padding:5px 11px;}
+}
+.tpl-empty{text-align:center;font-size:13px;color:var(--gray-500);padding:28px 0;}
+.tpl-empty[hidden]{display:none;}
+/* page-example tabs & list */
+.tf-tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:6px;}
+.tf-tab{font:inherit;font-size:13px;letter-spacing:0.06em;color:var(--gray-500);background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:10px 18px;cursor:pointer;}
+.tf-tab:hover{color:var(--ink);}
+.tf-tab.is-on{color:var(--ink);border-bottom-color:#6f695a;font-weight:600;}
+.tf-chips[hidden],.tpl-view[hidden],.tpl-list[hidden]{display:none;}
+.tpl-list h4{font-size:13px;color:var(--accent-strong);letter-spacing:0.04em;margin:22px 0 4px;}
+.tpl-list h4:first-child{margin-top:4px;}
+.tpl-list dl{margin:0;border-top:1px solid var(--line);}
+.tl-row{display:grid;grid-template-columns:200px 1fr auto;gap:16px;align-items:baseline;padding:11px 4px;border-bottom:1px solid var(--line);}
+.tl-row dt{font-size:13.5px;font-weight:600;color:var(--ink);}
+.tl-row dd{margin:0;}
+.tl-desc{font-size:12.5px;color:var(--gray-700);}
+.tl-price{font-family:var(--font-serif);font-size:14px;color:var(--ink);white-space:nowrap;}
+.tl-price span{font-size:10px;color:var(--gray-500);margin-left:2px;}
+@media (max-width:560px){
+  .tf-tab{font-size:12px;padding:9px 10px;flex:1;}
+  .tl-row{grid-template-columns:1fr auto;gap:2px 12px;}
+  .tl-desc{grid-column:1 / -1;grid-row:2;}
+}
+/* link to published Notion sample */
+.tpl-link{display:inline-flex;align-items:center;gap:4px;align-self:flex-start;margin-top:10px;font-size:11px;letter-spacing:0.04em;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none;transition:background .2s;}
+.tpl-link:hover{background:var(--accent-soft);}
+.tpl-zoom .tpl-link{margin:12px auto 0;display:flex;width:max-content;background:#fff;}
+/* page-example thumbnails from Notion */
+.tpl-thumb.has-img{padding:0;display:block;}
+.tpl-thumb.has-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left;}
+.tpl-zoom .tpl-thumb.has-img img{height:auto;max-height:70vh;object-fit:contain;}
+.tl-row dt a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gray-300);}
+/* list rows open the zoom view */
+.tl-row{cursor:pointer;transition:background .2s;}
+.tl-row:hover{background:var(--accent-soft);}
+.tpl-zoom-desc{font-size:13px;color:var(--gray-700);line-height:1.8;padding:0 18px;margin:4px 0 0;}
+.tpl-link.is-off{color:var(--gray-500);border-style:dashed;cursor:default;}
+.tpl-link.is-off:hover{background:none;}
+.tpl-zoom .tpl-link{margin:14px auto 18px;}
+/* filtered list pages under the cards */
+.tpl-view .tpl-sub[hidden],.tpl-view .tpl-cats[hidden],.tpl-match[hidden]{display:none;}
+.tpl-match{margin-top:8px;}
+.tpl-match .tpl-sub{margin:36px 0 12px;}
+.tpl-match dl{margin:0;border-top:1px solid var(--line);}
