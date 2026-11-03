@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=44">
+<link rel="stylesheet" href="style.css?v=56">
 </head>
 <body>
 
@@ -48,8 +48,8 @@
   <div class="hero-inner">
     <div class="hero-text">
       <h1>整える。伝える。<br><span>回していく。</span></h1>
-      <p class="lead">フリーランスの仕事を、迷わず進められる仕組みに。</p>
-      <div class="hero-more"><a class="hero-viewmore" href="notion.html">view more →</a></div>
+      <p class="lead">毎日の仕事を、迷わず進められる仕組みに。</p>
+      <div class="hero-more"><a class="hero-viewmore" href="story.html">view more →</a></div>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener">無料相談を申し込む</a>
       </div>
@@ -79,7 +79,7 @@
         <div class="svc-jp">Instagram運用サポート</div>
         <span class="svc-rule"></span>
         <p>発信の悩みを、仕組みと伴走で解決。<br>Notionでの投稿管理からリール制作まで、<br>まるごとお任せください。</p>
-        <a class="svc-btn" href="instagram.html">READ MORE</a>
+        <span class="svc-btn is-soon" aria-disabled="true">準備中</span>
       </div>
       <div class="svc-card">
         <div class="svc-no">03.</div>
@@ -87,7 +87,7 @@
         <div class="svc-jp">サービス・導線設計</div>
         <span class="svc-rule"></span>
         <p>「何を、誰に、どう届けるか」を整理。<br>サービス設計から予約・購入までの流れを整えます。</p>
-        <a class="svc-btn" href="service-design.html">READ MORE</a>
+        <span class="svc-btn is-soon" aria-disabled="true">準備中</span>
       </div>
     </div>
   </div>
@@ -188,12 +188,11 @@
     </div>
     <div class="pb-inner">
       <div class="pb-photo">
-        <img id="profilePhoto" src="profile.jpg" alt="" style="display:none">
-        <div class="pb-ph" id="profilePh"><span>顔写真</span><small>profile.jpg</small></div>
+        <img src="profile3.webp" alt="arisaのプロフィール写真">
       </div>
       <div class="pb-text">
         <div class="pb-name">arisa</div>
-        <div class="pb-role">Notion構築代行 / 元看護師・新生児フォトグラファー</div>
+        <div class="pb-role">Notion構築代行 / 元看護師・ニューボーンフォトグラファー</div>
         <p>「整理して、伝わる形にする」のが得意です。情報を整理し、迷わず使える形に整えることを大切にしています。</p>
         <a class="hero-viewmore" href="profile.html">view more →</a>
       </div>
@@ -262,14 +261,6 @@
       if (heroPlaceholder) heroPlaceholder.style.display = 'none';
     });
   }
-  const profilePhoto = document.getElementById('profilePhoto');
-  const profilePh = document.getElementById('profilePh');
-  if (profilePhoto) {
-    profilePhoto.addEventListener('load', () => {
-      profilePhoto.style.display = 'block';
-      if (profilePh) profilePh.style.display = 'none';
-    });
-  }
   document.querySelectorAll('.work-thumb img').forEach(img => {
     img.addEventListener('load', () => {
       img.style.display = 'block';
@@ -278,11 +269,12 @@
     });
   });
 
-  // WORKS を Notion(DB)→GAS から取得して表示。空なら上のサンプル枠のまま。
+  // WORKS を Notion(DB)→GAS から取得して表示。空ならWORKS欄ごと非表示。
   const WORKS_API = "https://script.google.com/macros/s/AKfycbw_ZzAaJ5ShrcZCGlMD8b1FFa9hiijfWj2C5VvIkqhl4gSJDakgrfB1LQS_jBWuEJpe/exec"; // GAS /exec
   if (WORKS_API) {
     fetch(WORKS_API).then(r => r.json()).then(items => {
       if (!Array.isArray(items) || !items.length) return;
+      document.body.classList.add('has-works'); // 実績があるときだけWORKS欄とメニューを表示
       const grid = document.querySelector('.works-grid');
       if (!grid) return;
       const esc = (t) => String(t == null ? '' : t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

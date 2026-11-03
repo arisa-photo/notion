@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=44">
+<link rel="stylesheet" href="style.css?v=56">
 </head>
 <body>
 
@@ -608,6 +608,10 @@
       }).join('');
     }).catch(() => {});
   })();
+</script>
+<script>
+  // WORKSに実績があるときだけ、メニューの「Works」を表示
+  fetch("https://script.google.com/macros/s/AKfycbw_ZzAaJ5ShrcZCGlMD8b1FFa9hiijfWj2C5VvIkqhl4gSJDakgrfB1LQS_jBWuEJpe/exec").then(r => r.json()).then(items => { if (Array.isArray(items) && items.length) document.body.classList.add('has-works'); }).catch(() => {});
 </script>
 </body>
 </html>
