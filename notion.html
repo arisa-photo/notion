@@ -54,20 +54,26 @@
   .ptable td.num em{display:block;font-style:normal;font-weight:600;font-size:10.5px;color:#8a3346;}
   .ptable-note{font-size:12px;color:#605b52;margin:10px 2px 0;line-height:1.8;}
   @media (max-width:520px){.ptable-wrap{padding:16px 12px 12px;}.ptable{font-size:12.5px;}.ptable th,.ptable td{padding:10px;}}
-  @media (max-width:600px){
-    .ptable{min-width:0;border:none;border-radius:0;overflow:visible;}
-    .ptable thead{display:none;}
-    .ptable,.ptable tbody,.ptable tr,.ptable th,.ptable td{display:block;width:auto;}
-    .ptable tr{border:1px solid #d3cec2;border-radius:8px;overflow:hidden;margin-bottom:10px;}
-    .ptable tbody th{background:#6f695a;color:#fff;padding:9px 12px;border:none;}
-    .ptable td{border-right:none;padding:9px 12px;display:flex;gap:10px;align-items:baseline;}
-    .ptable tr>td:last-child{border-bottom:none;}
-    .ptable td::before{content:attr(data-label);flex:0 0 7.2em;font-size:11px;font-weight:600;color:#7d786e;}
-    .ptable td:not([data-label])::before{display:none;}
-    .ptable td.num{text-align:left;}
-    .ptable td.num s,.ptable td.num em{display:inline;margin-right:6px;}
-    .ptable td.num{flex-wrap:wrap;}
+  .ptable-t{min-width:0;table-layout:fixed;}
+  .ptable-t thead th.corner{background:#f3f1ec;width:92px;}
+  .ptable-t thead th.h-khaki{background:#7f7d52;}
+  .ptable-t thead th.h-orange{background:#c2793a;}
+  .ptable-t thead th.h-brown{background:#6e5241;}
+  .ptable-t tbody th{text-align:center;white-space:normal;}
+  .ptable-t td{text-align:center;}
+  .ptable-t td.num{text-align:center;}
+  .ptable-t td.num small{display:block;margin:0;}
+  @media (max-width:768px){
+    .ptable-wrap{padding:14px 8px 10px;}
+    .ptable-t{font-size:11.5px;}
+    .ptable-t thead th{font-size:12px;padding:9px 4px;}
+    .ptable-t thead th.corner{width:52px;}
+    .ptable-t th,.ptable-t td{padding:9px 5px;}
+    .ptable-t tbody th{font-size:11px;padding:9px 3px;}
+    .ptable-t td.num{white-space:normal;font-size:12.5px;}
   }
+
+
   .pricing .price-card{padding:20px 20px 18px;}
   .pricing .price-card .price-for{font-size:11.5px;padding:3px 11px;margin-bottom:10px;align-self:flex-start;}
   .pricing .price-card h3{font-size:17px;margin-bottom:2px;}
@@ -249,10 +255,11 @@
           <p class="price-desc">表1つに記録して、見やすく整えるページ</p>
           <div class="price-exlist"><p class="pel-ttl">プランに含まれるもの</p>
             <ul>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>無料ヒアリング</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>無料ヒアリング（60分）</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>サンプル作成（ご納得後にお支払い）</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>作成</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>納品時レクチャー30分</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>修正（納品後2週間以内・回数無制限）</span></li>
             </ul></div>
           <a class="price-pages" href="#templates" data-plan="simple">具体的に作成できるページを見る<span aria-hidden="true">→</span></a>
           <a class="btn btn-outline" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener">相談する</a>
@@ -269,10 +276,11 @@
           <p class="price-desc">入力するだけで、集計や計算まで自動でできるページ</p>
           <div class="price-exlist"><p class="pel-ttl">プランに含まれるもの</p>
             <ul>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>無料ヒアリング</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>無料ヒアリング（60分）</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>サンプル作成（ご納得後にお支払い）</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>作成</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>納品時レクチャー30分</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>修正（納品後2週間以内・回数無制限）</span></li>
             </ul></div>
           <a class="price-pages" href="#templates" data-plan="auto">具体的に作成できるページを見る<span aria-hidden="true">→</span></a>
           <a class="btn btn-outline" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener">相談する</a>
@@ -289,10 +297,11 @@
           <p class="price-desc">お客様・予約・入金など、2〜3つのページをつなげてまとめて使えるセット</p>
           <div class="price-exlist"><p class="pel-ttl">プランに含まれるもの</p>
             <ul>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>無料ヒアリング</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>無料ヒアリング（60分）</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>サンプル作成（ご納得後にお支払い）</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>作成</span></li>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>納品時レクチャー30分</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>修正（納品後2週間以内・回数無制限）</span></li>
             </ul></div>
           <a class="price-pages" href="#templates" data-plan="connect">具体的に作成できるページを見る<span aria-hidden="true">→</span></a>
           <a class="btn btn-outline" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener">相談する</a>
@@ -302,16 +311,15 @@
     <div class="ptable-wrap">
       <p class="ptable-ttl">構築代行の料金表</p>
       <div class="ptable-scroll">
-      <table class="ptable">
-        <thead><tr><th>プラン</th><th>料金</th><th>どんなページ？</th><th>例</th></tr></thead>
+      <table class="ptable ptable-t">
+        <thead><tr><th class="corner"></th><th class="h-khaki">シンプル</th><th class="h-orange">オート</th><th class="h-brown">コネクト</th></tr></thead>
         <tbody>
-          <tr><th>シンプル</th><td data-label="料金" class="num">12,000円<small>/ 1ページ</small></td><td data-label="どんなページ？">表1つに記録して、見やすく整える</td><td data-label="例">顧客リスト・案件管理・SNS投稿管理</td></tr>
-          <tr><th>オート</th><td data-label="料金" class="num">18,000円<small>/ 1ページ</small></td><td data-label="どんなページ？">入力するだけで、集計や計算まで自動</td><td data-label="例">顧客管理（来店回数などを自動計算）・収支管理・原価計算</td></tr>
-          <tr><th>コネクト</th><td data-label="料金" class="num">30,000円<small>/ 1セット</small></td><td data-label="どんなページ？">2〜3つのページをつなげて使うセット</td><td data-label="例">顧客管理＋予約フォーム（顧客リスト＋来店履歴＋予約フォーム）</td></tr>
-          <tr><th>規約をつける</th><td data-label="料金" class="num">+4,000円</td><td data-label="どんなページ？" colspan="2">予約フォームに、規約をつける場合</td></tr>
-          <tr><th>チーム導入</th><td data-label="料金" class="num">別途お見積り</td><td data-label="どんなページ？" colspan="2">スタッフが多い、社内ダッシュボードや権限設計など</td></tr>
+          <tr><th>料金</th><td class="num">12,000円<small>/ 1ページ</small></td><td class="num">18,000円<small>/ 1ページ</small></td><td class="num">30,000円<small>/ 1セット</small></td></tr>
+          <tr><th>どんな<br>ページ？</th><td>表1つに記録して、見やすく整える</td><td>入力するだけで、集計や計算まで自動</td><td>2〜3つのページをつなげて使うセット</td></tr>
+          <tr><th>例</th><td>顧客リスト・案件管理・SNS投稿管理</td><td>顧客管理（来店回数などを自動計算）・収支管理・原価計算</td><td>顧客管理＋予約フォーム（顧客リスト＋来店履歴＋予約フォーム）</td></tr>
         </tbody>
       </table>
+      <p class="ptable-note">スタッフが多い、社内ダッシュボードや権限設計など本格的なチーム導入は、内容をお伺いして別途お見積りします。</p>
       </div>
     </div>
     <p class="price-addon">レクチャーが不要な方は省いても大丈夫です。<br>納品後のご相談や手直しは、スポットサポート（オンライン90分・¥15,000）で承っています。</p>
@@ -335,7 +343,7 @@
       <div class="price-card pc-orange">
         <div class="pc-head">
           <h3>3回コース</h3>
-          <p class="pc-sub">顧客リストから売上まで、自分で作りたい方</p>
+          <p class="pc-sub">お客様管理と予約フォームを、自分で作りたい方</p>
         </div>
         <div class="pc-body">
           <div class="price-strike">通常 ¥42,000</div>
@@ -343,7 +351,7 @@
           <p class="price-monitor">モニター価格中（1月申し込みの方のみ）</p>
           <p class="price-save">スポット3回分（¥45,000）より <b>¥7,000お得</b></p>
           <span class="pc-line"></span>
-          <p class="price-desc">基本操作から、顧客リスト・予約・売上をつなげて自分で回せるところまで</p>
+          <p class="price-desc">基本操作から、お客様管理と予約フォームを作り、完成後も自分で使えるところまで</p>
           <div class="price-exlist"><p class="pel-ttl">コースに含まれるもの</p>
             <ul>
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Zoom 90分 × 3回</span></li>
@@ -352,9 +360,9 @@
             </ul></div>
           <div class="price-exlist"><p class="pel-ttl">3回の流れ</p>
             <ul>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>1回目：基本操作と、顧客リスト</span></li>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>2回目：予約フォームとつなげる</span></li>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>3回目：売上と「今週連絡する人」、手直しと仕上げ</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>1回目：基本操作と共有設定、お客様管理の設計</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>2回目：お客様管理を一緒に作り、入力の練習</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>3回目：予約フォームを作り、使い方と共有設定を最終確認</span></li>
             </ul></div>
           <a class="btn btn-outline" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener">相談する</a>
         </div>
@@ -363,11 +371,12 @@
     <div class="ptable-wrap">
       <p class="ptable-ttl">個別サポートの料金表</p>
       <div class="ptable-scroll">
-      <table class="ptable">
-        <thead><tr><th>コース</th><th>料金</th><th>回数・時間</th><th>内容</th></tr></thead>
+      <table class="ptable ptable-t">
+        <thead><tr><th class="corner"></th><th class="h-khaki">スポット</th><th class="h-orange">3回コース</th></tr></thead>
         <tbody>
-          <tr><th>スポット</th><td data-label="料金" class="num">15,000円</td><td data-label="回数・時間">1回・90分</td><td data-label="内容">使い方の質問、今あるページの手直し、構築代行の納品後のご相談</td></tr>
-          <tr><th>3回コース</th><td data-label="料金" class="num"><s>通常 42,000円</s>38,000円<em>モニター価格中（1月申し込みの方のみ）</em><em class="save">スポット3回分より7,000円お得</em></td><td data-label="回数・時間">3回・各90分<br>（2ヶ月以内）</td><td data-label="内容">基本操作と顧客リスト → 予約フォームとつなげる → 売上と「今週連絡する人」、仕上げ<br>期間中はLINEでのチャットサポートつき</td></tr>
+          <tr><th>料金</th><td class="num">15,000円</td><td class="num"><s>通常 42,000円</s>38,000円<em>モニター価格中（1月申し込みの方のみ）</em><em class="save">スポット3回分より7,000円お得</em></td></tr>
+          <tr><th>回数・<br>時間</th><td>1回・90分</td><td>3回・各90分（2ヶ月以内）</td></tr>
+          <tr><th>内容</th><td>使い方の質問、今あるページの手直し、構築代行の納品後のご相談</td><td>基本操作・共有設定とお客様管理の設計 → お客様管理を作る → 予約フォームを作って最終確認<br>期間中はLINEでのチャットサポートつき</td></tr>
         </tbody>
       </table>
       </div>
@@ -576,7 +585,7 @@
     <div class="flow-list">
       <div class="flow-step">
         <div class="step-num">1</div>
-        <div><h3>ヒアリング</h3><p>無料相談で、今の困りごとや業務の流れをお伺いします。「Notionが何か分からない」もやもやした段階でも大丈夫です。</p></div>
+        <div><h3>ヒアリング</h3><p>無料相談（60分）で、今の困りごとや業務の流れをお伺いします。「Notionが何か分からない」もやもやした段階でも大丈夫です。</p></div>
       </div>
       <div class="flow-step">
         <div class="step-num">2</div>
