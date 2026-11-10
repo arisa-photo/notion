@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=56">
+<link rel="stylesheet" href="style.css?v=57">
+  <link rel="stylesheet" href="css/lp-editor.css">
+  <link rel="stylesheet" href="css/lp-motion.css">
 </head>
 <body>
 
@@ -44,15 +46,15 @@
 </div>
 
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" data-lpe="e6mwq6t"></div>
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <h1>整える。伝える。<br><span>回していく。</span></h1>
+      <h1 data-lpe-motion="blur-in">整える。伝える。<br><span>回していく。</span></h1>
       <p class="lead">毎日の仕事を、迷わず進められる仕組みに。</p>
-      <div class="hero-more"><a class="hero-viewmore" href="story.html">view more →</a></div>
+      <div class="hero-more"><a class="hero-viewmore" href="story.html" data-lpe="eefk3gt">view more →</a></div>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener">無料相談を申し込む</a>
+        <a class="btn btn-primary" href="https://lin.ee/vj0TIVS" target="_blank" rel="noopener" data-lpe="efzqi34">無料相談を申し込む</a>
       </div>
     </div>
   </div>
@@ -71,7 +73,7 @@
         <h3 class="svc-en">notion setup</h3>
         <div class="svc-jp">Notion構築代行</div>
         <span class="svc-rule"></span>
-        <p>散らばった情報を、ひとつの場所に。<br>あなたの働き方に合わせたNotionを設計します。<br>自分で作れるようになる個別サポートもあります。</p>
+        <p>散らばった情報を、ひとつの場所に。<br>あなたの働き方に合わせたNotionを設計します。<br>自分で作れるようになる個別サポートや、<br>今ある文書・リストをNotionにまとめるデータ移行もあります。</p>
         <a class="svc-btn" href="notion.html">READ MORE</a>
       </div>
       <div class="svc-card">
@@ -206,7 +208,7 @@
     <h2 class="contact-title">Contact</h2>
     <p>ご相談・ご依頼は、こちらから<br>お気軽にお問い合わせください。</p>
     <div class="contact-btns">
-      <a class="contact-btn" href="mailto:arisa.roff@gmail.com">
+      <a class="contact-btn" href="mailto:arisa.roff@gmail.com" data-lpe="evbhja7">
         <svg class="ic-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
         メールでお問い合わせ
       </a>
@@ -351,5 +353,6 @@
   })();
 </script>
 
+<script src="js/lp-motion.js" defer></script>
 </body>
 </html>
